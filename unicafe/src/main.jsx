@@ -5,8 +5,8 @@ const Statistics = (props) => {
   const { good, neutral, bad } = props
   const total = good + neutral + bad
   const score = good - bad
-  const average = score / total
-  const positive = good / total * 100
+  const average = score / total | 0
+  const positive = good / total * 100 | 0
 
   return (
     <div>
